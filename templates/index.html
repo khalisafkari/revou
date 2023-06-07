@@ -46,32 +46,45 @@
 </div>
 
 <div class="home-messages-us">
-    <div class="form">
-        <label for="name" >name</label>
-        <input id="name" type="text" placeholder="name">
 
-        <br>
 
-        <label for="alive_date" >tanggal lahir :</label>
-        <input type="date" id="alive_date" placeholder="tanggal lahir">
 
-        <br>
+    <div class="home-form-messages">
 
-        <label style="margin-right: 30px;" for="gender">Gender : </label>
+            <div class="field-name">
+              <label for="name">Name</label>
+              <input id="name" type="text" placeholder="name..." />
+            </div>
+            
+            <div class="field-date">
+              <label for="date">Date</label>
+              <input id="date" type="date" placeholder="select date" />
+            </div>
 
-        <input type="checkbox" name="male" id="male">
-        <label>Male</label>
+            <div class="field-gender">
+                <h5>What is Your Gender?</h5>
+                <div class="radio-gender">
+                    <input type="radio" name="grid" id="male" value="male" />
+                    <label for="male">Male</label>
+                    <input type="radio" name="grid" id="famale" value="famale" />
+                    <label for="famale">Famale</label>
+                </div>
+            </div>
 
-        <input type="checkbox" name="famale" id="famale">
-        <label>Famale</label>
-        
-        <br>
-        
-        <label style="margin-right: 45px;vertical-align: top;" for="pesan">Pesan :</label>
-        <textarea name="pesan" id="pesan" cols="30" rows="10"></textarea>
+            <div class="field-textarea">
+                <label for="message">Message</label>
+                <textarea id="message"></textarea>
+            </div>
 
-        <br>
-
-        <button onclick="doClick()">sumbit</button>
+            <div class="field-button">
+                <button class="button-sumbit">Sumbit</button>
+            </div>
     </div>
+
+    <div class="home-result">
+        <div class="result">
+           
+        </div>
+    </div>
+
 </div>

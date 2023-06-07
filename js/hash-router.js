@@ -28,6 +28,15 @@ const routes = {
 	},
 };
 
+const createLinkStyles = (href) => {
+    let link = document.createElement('link');
+    link.href = href;
+    link.type = "text/css";
+    link.rel = "stylesheet";
+    document.querySelector('head').append(link);
+}
+
+
 // create a function that watches the url and calls the urlLocationHandler
 const locationHandler = async () => {
 	// get the url path, replace hash with empty string
@@ -44,7 +53,17 @@ const locationHandler = async () => {
 	document.getElementById("content").innerHTML = html;
 	// set the title of the document to the title of the route
 	document.title = route.title;
-	// set the description of the document to the description of the route
+
+	if (route.template == '/templates/index.html') {
+		let script = document.createElement('script');
+		script['src'] = "/js/index.js";
+		document.querySelector('body').append(script);
+	}
+
+	createLinkStyles('/styles/profile.css');
+
+
+
 	document
 		.querySelector('meta[name="description"]')
 		.setAttribute("content", route.description);
