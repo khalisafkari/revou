@@ -263,7 +263,7 @@ body {
 
 .home-result > div > 
 h1,p {
-    margin: 2px 0 !important;
+    margin: 2px 0 ;
     font-weight: normal;
 }
 

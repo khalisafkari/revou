@@ -60,6 +60,12 @@ const locationHandler = async () => {
 		document.querySelector('body').append(script);
 	}
 
+	if (route.template == '/templates/profile.html') {
+		let script = document.createElement('script');
+		script['src'] = "/js/profile.js";
+		document.querySelector('body').append(script);
+	}
+
 	createLinkStyles('/styles/profile.css');
 
 
