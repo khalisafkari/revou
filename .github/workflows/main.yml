@@ -1,0 +1,19 @@
+name: Deno
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  my-job:
+    name: surge
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to revou-khalis.surge.sh
+        uses: dswistowski/surge-sh-action@v1
+        with:
+          domain: 'revou-khalis.surge.sh'
+          project: '.'
+          login: ${{ secrets.surge_login }}
+          token: ${{ secrets.surge_token }}
+      
